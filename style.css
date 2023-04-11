@@ -1,0 +1,311 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    
+}
+/* spiner */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    /* background: #333; */
+    position: relative;
+    width: 400px;
+    height: 400px;
+    /* border: 2px solid red; */
+     margin-top: 40px; 
+     margin-bottom: 30px;  
+}
+.container .spinBtn{
+    position: absolute;
+    
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+transform: uppercase;
+font-weight: 600;
+color:#333;
+letter-spacing:0.1em;
+border:4px solid rgba(0, 0, 0, 0.75);
+cursor:pointer;
+user-select: none;
+
+}
+
+.container .spinBtn::before{
+content: "";
+position: absolute;
+top:-28px;
+width: 20px;
+height:30px;
+background: #fff;
+clip-path: polygon(50% 0%, 13% 100%, 88% 100%);
+}
+.container .wheel{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: #333;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #333,0 0 0 15px #fff, 0 0 0 18px #111;
+    transition: transform 5s ease-in-out;
+
+}
+.container .wheel .number{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 55% 0, 100% 100%, 0 55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+}
+.container .wheel .number span{
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 2em;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
+}
+.container .wheel .number span::after{
+    content: '%';
+    position: absolute;
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+
+/* end spiner */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#main {
+    width: 70%;
+    margin: auto;
+    border: 1px solid bisque;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-bottom: 40px;
+
+
+}
+
+#undermain {
+    width: 70%;
+    margin: auto;
+    /* margin-bottom: 20px; */
+    /* border: 1px solid red; */
+}
+
+.navbar-brand {
+    color: blue;
+    font-weight: bold;
+}
+
+#logo {
+    height: 80px;
+}
+
+.check {
+    margin: auto;
+    font-size: 40px;
+    color: red;
+}
+
+.card {
+    margin: auto;
+    /* border: 2px solid red; */
+    /* margin-bottom: 40px; */
+
+}
+.card1 {
+    margin: auto;
+    border: 2px solid red;
+    padding: 10px;
+   
+
+}
+
+.card-img-top {
+    margin: auto;
+    width: 40%;
+    margin-bottom: 20px;
+
+}
+
+.card-text {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 2px;
+    /* letter-spacing: 1px; */
+    word-spacing: 1px;
+}
+
+.row {
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.down {
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    /* height: 600px; */
+
+}
+
+.down1 {
+    width: 95%;
+    margin: auto;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.form-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1180px) {
+    .card {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%
+    }
+
+    .check {
+        font-size: 30px;
+    }
+
+    .container-fluid {
+        width: 100%;
+        gap: 10px
+    }
+
+    #btn {
+        margin-left: 150px;
+        margin-bottom: 10px;
+    }
+
+    #undermain {
+        width: 100%
+    }
+
+    #main {
+        width: 90%;
+    }
+
+    .image {
+        object-fit: cover;
+    }
+
+    .checkdown {
+        text-decoration: none;
+        background-color: green;
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        color: white;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .nav {
+
+        width: 90px;
+        height: 80px;
+
+    }
+
+    .navbar-brand {
+        font-size: 15px;
+        margin-left: auto;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 20vh;
+        /* background: #333; */
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+
+a {
+    color: green;
+}
+
+a:hover {
+    color: blue;
+}
+
+.row1 {
+    margin-bottom: 80px;
+}
+
+.checkdown {
+    text-decoration: none;
+    background-color: green;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    color: white;
+
+}
+
+#downcheck {
+    margin-top: 10%;
+    padding-bottom: 10%;
+    
+  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.checkdown1 {
+    text-decoration: none;
+    margin-left: 60%;
+    background-color: green;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+
+
+
